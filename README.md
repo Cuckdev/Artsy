@@ -30,6 +30,11 @@ You fill in your username on the addon settings page and then you will be able t
 After that, these data will be stored locally in your browser, so the addon will generate 0 extra server traffic during use, since it will be looking up all the data it needs in this local database. <br>
 This also applies to charting, if you chart one of your own videos, it will simply use the local data and no server traffic will be generated. However, if you want, you can chart videos from any other uploader as well, in which case the addon will simply download the missing like data, if it doeasn't already have them.
 
+# How to install
+It's very simple, download the Artsy .js file and install it with your userscript manager of choice, I use Violentmonkey for example. After that go to Iwara, open Artsy config page, fill in your user name, and then click the Update buttons.
+<br>
+<a href="https://raw.githubusercontent.com/Cuckdev/Artsy/refs/heads/main/artsy.user.js">Direct install link</a>
+
 <br>
 <p><b>Artsy is in no way associated with Iwara in any official capacity.</b></p>
 
