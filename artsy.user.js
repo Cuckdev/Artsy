@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Artsy
 // @namespace    cuckIndustries
-// @version      v1.0
+// @version      v1.01
 // @description  User stats tool for iwara.tv
 // @author       Cuckdev
 // @match        https://www.iwara.tv/*
@@ -880,7 +880,7 @@ if(!GM){ var GM = {'info': {'script': {'version': 1.0}}} } // For DEV loader scr
             // Match: api.<anything>/comments?
             // Example: api.v1/comments?x=123            
 
-            if (/api\..*\/comments\?/.test(url) || /api\..*\?page=/.test(url)) {
+            if (/apiq?\..*\/comments\?/.test(url) || /apiq?\..*\?page=/.test(url)) {
                 // Clone so we don't consume the body
                 const clone = response.clone();
 
@@ -1300,7 +1300,7 @@ if(!GM){ var GM = {'info': {'script': {'version': 1.0}}} } // For DEV loader scr
         chartDataPrepHtml.innerHTML = `<input type="text" placeholder="videoId1,videoId2,videoId3" id="chartVideoIds" style="width: 95%;" title="Any videos we already have like data for, will be graphed from this cached data for better efficiency\nYou can add or remove videos from the chart at any time by editing this field\nDownloaded data (except for your own videos) will be lost upon page reload">
         <br>Max likes: <input type="number" step="100" min=100 max=100000 value="2000" placeholder="2000" style="width: 80px" id="chartMaxLikes" title="Maximum amount of likes per video to gather">   
         <input type="button" value="Add yours" id="chartAddYours"> 
-        <input type="button" value="Chart selected data" id="chartStart"> 
+        <input type="button" value="Chart selected data" id="chartStart"> <span style="font-style: italic; font-size: 10px; color: gray; float: right">Note: It is no longer possible to chart any likes older than 2026, <br>since Iwara was not able to recover like timestamps, when they switched hostings.</span>
 
         <div id="chartProgressBar"></div>`;
 
